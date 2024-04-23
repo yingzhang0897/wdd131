@@ -1,0 +1,47 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  color: white;
+}
+#content {
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+header h1 {
+    background-color: gray;
+    padding: 2rem;
+    text-align: left;
+    margin: 0;
+}
+  
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    background-color: black;
+    margin-top: 0;
+    padding: 1rem;
+  }
+
+main {
+  display: flex;
+  color: black;
+  height: 500px;
+}
+.main-content {
+  flex: 2;
+  background-color: lightgray;
+  padding: 1rem;
+}
+.aside-content {
+  flex: 1;
+  background-color: white;
+  padding: 1rem;
+}
+footer {
+    background-color: gray;
+    padding: 2rem;
+    text-align: center;
+  }
+  
