@@ -6,6 +6,7 @@ body {
 #content {
     height: 100vh;
     margin: 0 auto;
+    width: 20%;
   }
 
 header h1 {
@@ -25,17 +26,18 @@ nav {
   }
 
 main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   color: black;
   height: 500px;
+  width: 100%;
+  margin: 0 auto;
 }
 .main-content {
-  flex: 2;
   background-color: lightgray;
   padding: 1rem;
 }
 .aside-content {
-  flex: 1;
   background-color: white;
   padding: 1rem;
 }
