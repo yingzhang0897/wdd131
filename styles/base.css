@@ -13,7 +13,7 @@ body {
 
 /* Center the main element horizontally */
 main {
-    width: 80%; /* Limited width */
+    max-width: 80%; /* Limited width */
     margin: 0 auto; /* Center horizontally */
 }
 
