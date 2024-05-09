@@ -1,5 +1,14 @@
 .hero img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
   }
+
+  @media (min-width: 500px) {
+    .hero picture source:nth-of-type(1) {
+        display: none; /* Hide the large image source */
+    }
+    
+    .hero picture source:nth-of-type(2) {
+        display: block; /* Display the medium image source */
+    }
+}

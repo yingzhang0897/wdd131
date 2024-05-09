@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - responsive-images</title>
-</head>
-<body>
-    <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 131 - responsive-images</title>
+       <link rel="stylesheet" href="responsive-images.css">
+    </head>
+    <body>
+        <header>
+            <h1>HongKong China Temple</h1>
+        </header>
+        <main>
+            <div class="hero">
+                <picture>
+                    <source srcset="images/hero-large.webp" media="(min-width: 750px)">
+                    <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                    <img src="images/hero-small.webp" alt="HongKong China Temple" width="250" height="322">
+                </picture>
+            </div>
+        </main>
+        <footer>
 
-    </header>
-    <main>
-        <div class="hero">
-            <picture>
-                <source srcset="images/hero-large.webp" media="(min-width: 750px)">
-                <source srcset="images/hero-medium.webp" media="(min-width: 750px)">
-                <img src="images/hero-small.webp" alt="HongKong China Temple" width="250" height="322">
-              </picture>
-        </div>
-    </main>
-    <footer>
-
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>
