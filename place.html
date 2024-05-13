@@ -14,8 +14,43 @@
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
-    <h1>Tianjin, China</h1>
-    
-    
+    <header>
+        <h1>Tianjin, China</h1>
+    </header>
+    <div id="hero">
+        <img src="images/hai-river-small.webp"
+             srcset="images/hai-river-small.webp 400w,
+                     images/hai-river-medium.webp 690w,
+                     images/hai-river-large.webp 1024w"
+             sizes=" (max-width: 400px) 70vw,
+                     (min-width: 401px) and (max-width: 999px) 80vw,
+                     100vw"
+             alt="Tianjin Hai River view">
+     </div>
+    <main>
+        <section>
+            <h2>Data</h2>
+            <p>Location: Northern coast of China</p>
+            <p>Status: Municipality </p>
+            <p>Population: 15.62 million</p>
+            <p>Area:4,612 mi²</p>
+            <p>Time Zone:GMT+8</p>
+            <p>Climate:Four distinct seasons</p>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <div>
+                <img src="images/weather-icon.svg" alt="Weather icon svg" width="60">
+            </div>
+            <p>Temerature:79F</p>
+            <p>Conditions: Sunny</p>
+            <p>Wind: 8mph</p>
+            <p>Wind Chill:</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> Ying Zhang, Oregon, US </p>
+        <p id="lastModified">Last modified: </p>
+    </footer>
 </body>
 </html>

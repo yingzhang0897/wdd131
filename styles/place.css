@@ -1,0 +1,45 @@
+/* Global CSS variables */
+:root {
+    --section-spacing: 20px;
+    --font-family: 'Roboto', sans-serif;
+    --font-weight: 400;
+    --font-style: normal;
+    --Primary-color: rgba(255, 255, 255, 0.8); 
+    --Second-color: lightblue;
+  }
+  /* Default styles */
+  body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    background-color: var(--Second-color);
+    padding: 10px 0;
+  }
+  
+  #hero {
+    position: relative;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  main {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  section {
+    margin-bottom: var(--section-spacing);
+  }
+  
+  footer {
+    text-align: center;
+    background-color: var(--Second-color);
+    padding: 20px 0;
+  }

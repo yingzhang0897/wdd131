@@ -1,0 +1,35 @@
+/* Wide View */
+@media screen and (min-width: 1000px) {
+   
+    #hero {
+        position: relative; 
+    }
+
+    section {
+        position: absolute;
+        background-color: var(--Primary-color); 
+        padding: 20px;
+    }
+    
+    section:nth-child(1) {
+        top: 100px; 
+        left: 20px; 
+    }
+    section:nth-child(2) {
+        bottom: 20px; 
+        right: 20px; 
+    }
+    
+    .weather img {
+        display: none;
+    }
+    .weather h2::after {
+      content: "🌤️";
+      margin-left: 5px;
+    }
+    
+    footer {
+        margin-top: -65px;
+    }
+}
+  
