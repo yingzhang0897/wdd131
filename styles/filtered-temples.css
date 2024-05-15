@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto',sans-serif;	
+}
+
+h1 {
+	text-align: left;
+    font-size: 1.5rem;
+	padding: 1rem;
+	background-color: rgb(139, 181, 237); 
+}
+
+h2 {
+    text-align: center;
+	font-size: 1.2rem;
+	color: navy;
+	margin: 1rem;
+}
+
+nav {
+	margin: 1rem auto;
+}
+footer p {
+	background-color: rgb(139, 181, 237); 
+	padding: 1rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* small view navigation */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.navigation {	
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: #333;
+	color: #fff;
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+.navigation a:hover {
+	background-color: #bbb;
+	color: #333;
+	font-weight: 700;
+}
+main {
+    max-width: 90%;
+    margin: 1rem auto;
+}
+.temple-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+
+
+.temple-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.temple-card h2 {
+    margin-top: 0;
+    text-align: center ;
+}
+
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+.active::before { 
+	content: "📍";  /* just a wayfinding symbol for the user */
+}
+
+/* large view navigation ************************************/
+@media (min-width: 37.5em) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: rgb(139, 181, 237); 
+	}
+	h1 {
+		text-align: left;
+		margin-right: auto; /*push h1 to the left*/
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	#menu {
+		display: none; /* hide hamburger button */
+	}
+	.navigation {
+		flex-direction: row;
+		background-color: rgb(139, 181, 237); 
+	}
+	
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;	
+		width: 100px;
+	}
+	#temple-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 25px;
+		place-items: center;
+	}
+
+	main div {
+        border: 1px solid #ccc;
+        padding: 10px;   
+    }
+}
+
