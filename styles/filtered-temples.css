@@ -1,42 +1,54 @@
-* {
-	margin: 0;
-	padding: 0;
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --font-weight: 400;
+    --font-style: normal;
+    --Primary-color: rgb(139, 181, 237); 
+    --Second-color: navy;
+	--Third-color: #fff;
+	--Fourth-color: #000
+  }
+  /* Default styles */
+  body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+    margin: 0;
+    padding: 0;
 	box-sizing: border-box;
-}
-body {
-    font-family: 'Roboto',sans-serif;	
 }
 
 h1 {
 	text-align: left;
     font-size: 1.5rem;
 	padding: 1rem;
-	background-color: rgb(139, 181, 237); 
+	background-color: var(--Primary-color)
 }
 
 h2 {
     text-align: center;
-	font-size: 1.2rem;
-	color: navy;
-	margin: 1rem;
+	color: var(--Second-color);
 }
 
 nav {
 	margin: 1rem auto;
 }
+nav a {
+	color: var(--Fourth-color);
+}
 footer p {
-	background-color: rgb(139, 181, 237); 
+	background-color: var(--Primary-color); 
 	padding: 1rem;
 	margin: 0 auto;
 	text-align: center;
 }
+
 
 /* small view navigation */
 #menu {
 	font-size: 1.5rem;
 	border: 0;
 	background: none;
-	color: #000;
+	color: var(--Fourth-color);
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
@@ -54,47 +66,41 @@ footer p {
 	display: flex;
 	flex-direction: column;
 	list-style: none;
-	background-color: #333;
-	color: #fff;
+	background-color: var(--Primary-color);
 }
 
 .navigation a {
 	display: none;
-	padding: 1rem;
+	padding: 0.5rem;
 	text-align: center;
 	text-decoration: none;
-	color: #fff;
 }
 .navigation a:hover {
-	background-color: #bbb;
-	color: #333;
-	font-weight: 700;
+	background-color: var(--Third-color);
+	font-weight: var(--font-weight);
+	padding: 0.5rem;
 }
 main {
     max-width: 90%;
     margin: 1rem auto;
 }
 .temple-card {
-    border: 1px solid #ccc;
+    border: 1px solid var(--Third-color);
     padding: 16px;
     margin: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    box-shadow: 0 4px 8px var(--Primary-color);
+    max-width: 600px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    justify-items: center;
+    justify-items: left;
 }
-
-
 .temple-card img {
     width: 100%;
     border-radius: 8px;
 }
-
-.temple-card h2 {
-    margin-top: 0;
-    text-align: center ;
+.temple-card p {
+	margin: 5px;
 }
 
 
@@ -121,7 +127,7 @@ main {
 	}
 
 	h2 {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	#menu {
@@ -129,14 +135,13 @@ main {
 	}
 	.navigation {
 		flex-direction: row;
-		background-color: rgb(139, 181, 237); 
+		background-color: var(--Primary-color); 
 	}
 	
-
 	.navigation a {
 		display: block;
 		flex: 1 1 100%;	
-		width: 100px;
+		width: 60px;
 	}
 	#temple-container {
 		display: grid;
@@ -146,7 +151,7 @@ main {
 	}
 
 	main div {
-        border: 1px solid #ccc;
+        border: 1px solid var(--Third-color);
         padding: 10px;   
     }
 }

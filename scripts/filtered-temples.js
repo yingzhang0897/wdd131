@@ -1,9 +1,11 @@
+//dynamically display date and time in footer
 const currentYear = new Date().getFullYear();
 document.getElementById('currentYear').textContent = currentYear;
 const lastModified = new Date(document.lastModified);
 const lastModifiedDate = `${lastModified.getFullYear()}-${(lastModified.getMonth() + 1).toString().padStart(2, '0')}-${lastModified.getDate().toString().padStart(2, '0')} ${lastModified.getHours().toString().padStart(2, '0')}:${lastModified.getMinutes().toString().padStart(2, '0')}:${lastModified.getSeconds().toString().padStart(2, '0')}`;
 document.getElementById('lastModified').textContent += lastModifiedDate;
 
+//small view and large view
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
@@ -11,8 +13,9 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
+//make temple cards
 const temples = [
-    {
+  {
     templeName: "Aba Nigeria",
     location: "Aba, Nigeria",
     dedicated: "2005, August, 7",
@@ -89,9 +92,11 @@ const temples = [
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
   }
 ];
-  
+//dynamically populate temple cards
+function renderTemples(temples) {
   const templeContainer = document.getElementById('temple-container');
-  
+  templeContainer.innerHTML = ''; // Clear existing content before apending new filtered temple cards
+
   temples.forEach(temple => {
     const card = document.createElement('div');
     card.className = 'temple-card';
@@ -120,4 +125,66 @@ const temples = [
   
     templeContainer.appendChild(card);
   });
+    //edit the width and height of temple images that I add
+  const images = document.querySelectorAll('#temple-container img');
+  const lastThreeImages = Array.from(images).slice(-3);
+
+  lastThreeImages.forEach(img => {
+      img.style.width = '150px'; 
+      img.style.height = '100px'; 
+  });
+}
+  //filter temples
+  function filterOldTemples() {
+    return temples.filter(temple => {
+      const dedicatedYear = parseInt(temple.dedicated.split(',')[0]);
+      return dedicatedYear < 1900;
+    });
+  }
   
+  function filterNewTemples() {
+    return temples.filter(temple => {
+      const dedicatedYear = parseInt(temple.dedicated.split(',')[0]);
+      return dedicatedYear >= 2000;
+    });
+  }
+  
+  function filterLargeTemples() {
+    return temples.filter(temple => temple.area > 90000);
+  }
+  
+  function filterSmallTemples() {
+    return temples.filter(temple => temple.area < 10000);
+  }
+  function displayAllTemples() {
+    return temples;
+  }
+  //integrate filter function into nav menu
+  document.addEventListener('DOMContentLoaded', () => {
+      // Initially display all temples
+    renderTemples(displayAllTemples());
+    document.getElementById('home').addEventListener('click', (e) => {
+      e.preventDefault();//cannot let <a> link reload by default
+      renderTemples(displayAllTemples());
+    });
+  
+    document.getElementById('old').addEventListener('click', (e) => {
+      e.preventDefault();//cannot let <a>  link reload by default
+      renderTemples(filterOldTemples());
+    });
+  
+    document.getElementById('new').addEventListener('click', (e) => {
+      e.preventDefault();//cannot let <a>  link reload by default
+      renderTemples(filterNewTemples());
+    });
+  
+    document.getElementById('large').addEventListener('click', (e) => {
+      e.preventDefault();//cannot let<a>  link reload by default
+      renderTemples(filterLargeTemples());
+    });
+  
+    document.getElementById('small').addEventListener('click', (e) => {
+      e.preventDefault();//cannot let <a>  link reload by default
+      renderTemples(filterSmallTemples());
+    });
+  });
