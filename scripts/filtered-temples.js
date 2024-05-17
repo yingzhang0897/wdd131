@@ -71,22 +71,22 @@ const temples = [
     templeName: "Portland Oregon",
     location: "Portland, Oregon, USA",
     dedicated: "1989, August, 19",
-    area: 80,500,
-    imageUrl: "src='images/temple-cards/portland-oregon-temple-webp'"
+    area: 80500,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/portland-oregon-temple/portland-oregon-temple-1629-main.jpg"
   },
   {
     templeName: "Hong Kong China",
     location: "Hong Kong, China",
     dedicated: "1996, May, 26",
     area: 51921,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/hong-kong-china/400x250/hong-kong-china-temple-exterior-1201313-wallpaper.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/hong-kong-china-temple/hong-kong-china-temple-28125-main.jpg"
   },
   {
     templeName: "Tokyo Japan",
     location: "Tokyo, Japan",
     dedicated: "1980, October, 29",
     area: 53997,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/singapore/400x250/singapore-temple-exterior-1529014-wallpaper.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
   }
 ];
   
