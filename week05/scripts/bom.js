@@ -47,8 +47,8 @@ function displayList(item) {
 }
 //delete chapter function
 function deleteChapter(chapter) {
-  chapter = chapter.slice(0, chapter.length - 1);// remove the last character -the  cross sign
-  chaptersArray = chaptersArray.filter(item => item !== chapter);
+  chapter = chapter.slice(0, chapter.length - 1);// remove the delete button of a list
+  chaptersArray = chaptersArray.filter(item => item !== chapter);//keep chapters with delete button
   setChapterList();
 };
 
