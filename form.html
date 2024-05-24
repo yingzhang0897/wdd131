@@ -17,7 +17,7 @@
     <main>
         <form action="review.html" method="get">
             <fieldset>
-                <legend for="product">Product Name *</legend>
+                <legend>Product Name *</legend>
                 <select id="product" name="product" required>
                     <option value="" disabled selected>Select a product &#9662;</option>
 
@@ -42,7 +42,7 @@
             </fieldset>
             
             <fieldset>
-                <legend for="installation-date">Date of Installation *</legend>
+                <legend>Date of Installation *</legend>
                 <input type="date" id="installation-date" name="installation-date" required>
             </fieldset>
 
@@ -52,19 +52,20 @@
                     <label for="quality"><input type="checkbox" id="quality" name="features" value="quality">Quality</label>
                     <label for="price"><input type="checkbox" id="price" name="features" value="price">Price</label>
                     <label for="design"><input type="checkbox" id="design" name="features" value="design">Design</label>
+                    <label for="packaging"><input type="checkbox" id="packaging" name="features" value="packaging">Packaging</label>
                 </div>
             </fieldset>
 
             <fieldset>
-                <legend for="review">Written Review<span>(optional)</span></legend>
+                <legend>Written Review<span>(optional)</span></legend>
                 <textarea id="review" name="review"></textarea>
             </fieldset>
 
             <fieldset>
-                <legend for="username">Your Name<span>(optional)</span></legend>
+                <legend>Your Name<span>(optional)</span></legend>
                 <input type="text" id="username" name="username">
             </fieldset>
-            
+
             <input type="submit" value="Post Review">
         </form>
     </main>
