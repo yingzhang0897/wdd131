@@ -1,0 +1,124 @@
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --font-weight: 400;
+    --font-style: normal;
+    --Primary-color: lightsalmon;
+    --Second-color: #000080; 
+  }
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    background-color: var(--Primary-color);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+fieldset {
+    margin: 1rem auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: colummn;
+    align-items: center;
+}
+legend {
+    color: var(--Second-color);
+    font-size: large;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: var(--font-weight);
+}
+form input:required {
+    border-left: solid 8px var(--Primary-color);
+}
+form input:required:valid {
+    border-left: solid 8px green;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+input[type="submit"]:hover {
+    background-color: var(--Primary-color);
+}
+span {
+    font-style: italic;
+}
+/* style star rating */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 0.1rem;
+}
+
+.star-rating input:checked ~ label {
+    color: gold;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+
+.star-rating input:checked ~ label:hover,
+.star-rating input:checked ~ label:hover ~ label {
+    color: gold;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    font-size: var(--font-weight);
+    background-color: var(--Primary-color);
+}
+

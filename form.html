@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="This page display a product review form">
+    <meta name="author" content="Ying Zhang">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header><h1>Product Review</h1></header>
+    <main>
+        <form action="review.html" method="get">
+            <fieldset>
+                <legend for="product">Product Name *</legend>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a product &#9662;</option>
+
+
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Overall Rating *</legend>
+                <div class="star-rating">
+                    <label for="fivestar">&#9733;</label>
+                    <input type="radio" id="fivestar" name="stars" value="5" required>
+                    <label for="fourstar">&#9733;</label>
+                    <input type="radio" id="fourstar" name="stars" value="4" required>
+                    <label for="threestar">&#9733;</label>
+                    <input type="radio" id="threestar" name="stars" value="3" required>
+                    <label for="twostar">&#9733;</label>
+                    <input type="radio" id="twostar" name="stars" value="2" required>
+                    <label for="onestar">&#9733;</label>
+                    <input type="radio" id="onestar" name="stars" value="1" required>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend for="installation-date">Date of Installation *</legend>
+                <input type="date" id="installation-date" name="installation-date" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Useful features in the product</legend>
+                <div>
+                    <label for="quality"><input type="checkbox" id="quality" name="features" value="quality">Quality</label>
+                    <label for="price"><input type="checkbox" id="price" name="features" value="price">Price</label>
+                    <label for="design"><input type="checkbox" id="design" name="features" value="design">Design</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend for="review">Written Review<span>(optional)</span></legend>
+                <textarea id="review" name="review"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend for="username">Your Name<span>(optional)</span></legend>
+                <input type="text" id="username" name="username">
+            </fieldset>
+            
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> Ying Zhang, Oregon, US </p>
+        <p id="lastModified">Last modified: </p>
+    </footer>
+</body>
+</html> 
