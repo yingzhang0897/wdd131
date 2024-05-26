@@ -2,7 +2,11 @@
 /* if you are using any Google fonts change the font names below to your fonts. 
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a & */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rock+Salt&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Satisfy&display=swap');
+
+
 :root {
   /* change the values below to your colors from your palette */
   --primary-color: #ebcfb2   ;
@@ -11,7 +15,7 @@ Fonts are separated by a & */
   --accent2-color: white;
 
   /* change the values below to your chosen font(s) */
-  --heading-font: "Rock Salt";
+  --heading-font: "Satisfy";
   --paragraph-font: Roboto, Helvetica, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
@@ -122,43 +126,90 @@ nav a:hover {
 .sitemap {
   display: grid;
   justify-content: center;
-
-  grid-template-columns: repeat(6, 15%);
-  grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
-    ". . . top . ."
-    ". left left right right ."
-    "page2 page2 . . page3 page3";
+  align-items: center;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 3em 2em 3em;
+  grid-template-areas: 
+    ". . . home . . ."
+    ". . . connector . . ."
+    "page2 page2 . page3 . page4 page4";
+  gap: 0.5em;
+  position: relative;
 }
+
 .sitemap > div {
   text-align: center;
+  position: relative;
 }
+
 .sm-home {
   grid-area: home;
   background-color: #ccc;
   line-height: 3em;
 }
+
+.sm-page2, .sm-page3, .sm-page4 {
+  background-color: #ccc;
+  line-height: 3em;
+}
+
 .sm-page2 {
   grid-area: page2;
-  background-color: #ccc;
-  line-height: 3em;
 }
+
 .sm-page3 {
   grid-area: page3;
-  background-color: #ccc;
-  line-height: 3em;
 }
-.top {
-  grid-area: top;
-  border-left: 1px solid;
+
+.sm-page4 {
+  grid-area: page4;
 }
-.left {
-  grid-area: left;
-  border-top: 1px solid;
-  border-left: 1px solid;
+
+/* Connector lines */
+.connector {
+  grid-area: connector;
+  position: relative;
 }
-.right {
-  grid-area: right;
-  border-top: 1px solid;
-  border-right: 1px solid;
+
+.connector::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: black;
+}
+
+.connector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 2em);
+  height: 1px;
+  background-color: black;
+  transform: translateX(-50%);
+}
+
+.sm-page2::before,
+.sm-page3::before,
+.sm-page4::before {
+  content: '';
+  position: absolute;
+  top: -2em;
+  left: 50%;
+  width: 1px;
+  height: 2em;
+  background-color: black;
+}
+
+.sm-home::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 1px;
+  height: 2em;
+  background-color: black;
 }
