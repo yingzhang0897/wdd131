@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Satisfy&display=swap');
+
+:root {
+  --primary-color: #ebcfb2;
+  --secondary-color: #04466c;
+  --accent1-color: #3F7D20;
+  --accent2-color: #5A4956;
+
+  --heading-font: "Satisfy", cursive;
+  --paragraph-font: "Roboto", Helvetica, sans-serif;
+
+  --headline-color-on-white: #5A4956;
+  --headline-color-on-color: #ebcfb2;
+  --paragraph-color-on-white: #5A4956;
+  --paragraph-color-on-color: #ebcfb2;
+  --paragraph-background-color: #04466c;
+  --nav-link-color: #ebcfb2;
+  --nav-background-color: #04466c;
+  --nav-hover-link-color: #5A4956;
+  --nav-hover-background-color: #ebcfb2;
+}
+
+body.services {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header.services-header {
+  background-color: var(--secondary-color);
+  color: var(--headline-color-on-color);
+  padding: 2em 0;
+}
+
+header.services-header h1 {
+  font-family: var(--heading-font);
+  font-size: 2.5em;
+  margin: 0;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+main.services-main {
+  padding: 2em;
+}
+
+main.services-main section {
+  margin: 2em 0;
+}
+
+main.services-main h2 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  font-size: 2em;
+}
+
+main.services-main p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+footer.services-footer {
+  background-color: var(--secondary-color);
+  color: var(--headline-color-on-color);
+  padding: 1em 0;
+  font-size: 0.9em;
+}
+
+a {
+  color: var(--accent1-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
