@@ -59,6 +59,9 @@ nav a:hover {
   background-color: var(--nav-hover-background-color);
 }
 
+.activeContact::before { 
+	content: "📍";  /* just a wayfinding symbol for the user */
+}
 main.contact-main {
   padding: 2em;
 }

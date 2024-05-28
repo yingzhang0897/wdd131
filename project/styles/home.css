@@ -58,7 +58,9 @@ nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
 }
-
+.activeHome::before { 
+	content: "📍";  /* just a wayfinding symbol for the user */
+}
 main.home-main {
   padding: 2em;
 }
