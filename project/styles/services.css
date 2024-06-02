@@ -98,3 +98,41 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.service-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px auto; /* Centering the card */
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive iframe container */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* For better responsiveness on smaller devices */
+@media (max-width: 768px) {
+  .service-card {
+    margin: 8px auto;
+    padding: 12px;
+  }
+}
+.service-card h3 {
+  margin-bottom: 8px;
+}

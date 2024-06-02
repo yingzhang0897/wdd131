@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Satisfy&display=swap');
-
+/* Global styles */
 :root {
   --primary-color: #ebcfb2;
   --secondary-color: #04466c;
@@ -16,10 +15,10 @@
   --paragraph-background-color: #04466c;
   --nav-link-color: #ebcfb2;
   --nav-background-color: #04466c;
-  --nav-hover-link-color: #5A4956;
   --nav-hover-background-color: #ebcfb2;
 }
 
+/* Contact page styles */
 body.contact {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-white);
@@ -60,8 +59,9 @@ nav a:hover {
 }
 
 .activeContact::before { 
-	content: "📍";  /* just a wayfinding symbol for the user */
+  content: "📍";  /* just a wayfinding symbol for the user */
 }
+
 main.contact-main {
   padding: 2em;
 }
@@ -97,4 +97,46 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+label {
+  padding: 10px;
+  display: block;
+  margin: 10px;
+}
+form input:required {
+  border-left: solid 8px var(--accent2-color);
+}
+form input:required:valid {
+  border-left: solid 8px var(--accent1-color);
+}
+fieldset {
+  margin: 10px auto;
+  border: 1px solid var(--accent2-color);
+  border-radius: 10px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+textarea {
+  width: 60%;
+  padding: 20px;
+  border: 1px solid var(--accent2-color);
+  border-radius: 4px;
+}
+input[type="submit"] {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  border: 5px solid var(--secondary-color);
+  border-radius: 4px;
+  font-family: var(--heading-font);
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color);
+}
+span {
+  font-style: italic;
 }

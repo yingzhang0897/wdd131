@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Jianjun's Furniture Store</title>
   <link rel="stylesheet" href="styles/contact-us.css">
+  <script src="scripts/furniture-store.js" defer></script>
 </head>
 
 <body class="contact">
@@ -16,28 +17,38 @@
       <a href="products.html" class="activeProducts">Products</a>
       <a href="services.html" class="activeServices">Services</a>
       <a href="contact-us.html" class="activeContact">Contact Us</a>
-  </nav>
-</header>
-<main class="contact-main">
-  <h2>Get in Touch</h2>
-  <p>If you have any questions, need assistance, or would like to provide feedback, please contact us using the form below or reach out through our provided contact details.</p>
-  <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-    
-    <button type="submit">Submit</button>
-  </form>
-</main>
-
-<footer class="contact-footer">
-  <p>&copy; 2024 Jianjun's Furniture Store. All rights reserved.</p>
-</footer>
+    </nav>
+  </header>
+  <main class="contact-main">
+    <h2>Get in Touch</h2>
+    <form action="submission-success.html" method="get">
+      <label for="name">Name: <input type="text" id="name" name="name" required></label>
+      <label for="tel">Cellphone: <input type="tel" id="phone" name="phone" required></label>
+      <label for="email">Email: <input type="email" id="email" name="email"></label>
+      <fieldset>
+        <label for="services">What type of services do you need?</label><br>
+        <label for="delivery-assembly">
+          <input type="checkbox" id="delivery-assembly" name="service" value="delivery-assembly">Make delivery & assembly appointment
+        </label>
+        <label for="track-order">
+          <input type="checkbox" id="track-order" name="service" value="track-order"> Track your order
+        </label>
+        <label for="interior-design">
+          <input type="checkbox" id="interior-design" name="service" value="interior-design"> Interior design consultation
+        </label>
+        <label for="furniture-repair">
+          <input type="checkbox" id="furniture-repair" name="service" value="furniture-repair">Furniture repair
+        </label>
+      </fieldset>
+      <label for="message">Message:<span>(optional)</span></label>
+      <textarea id="message" name="message" required></textarea>
+      <input type="submit" value="Here we go">
+    </form>
+    <p>If you have any questions, need assistance, or would like to provide feedback, please contact us using the form below or reach out through our provided contact details.</p>
+  </main>
+  <footer class="contact-footer">
+    <p>&copy;<span id="currentYear"></span> Jianjun's Furniture Store. All rights reserved. </p>
+    <p id="lastModified">Last modified: </p>
+  </footer>
 </body>
-
 </html>

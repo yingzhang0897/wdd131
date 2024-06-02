@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Satisfy&display=swap');
-
+/* Global styles */
 :root {
   --primary-color: #ebcfb2;
   --secondary-color: #04466c;
@@ -29,10 +28,10 @@ body.products {
   text-align: center;
 }
 
-header.products-header {
+header.products-header,
+footer.products-footer {
   background-color: var(--secondary-color);
   color: var(--headline-color-on-color);
-  padding: 2em 0;
 }
 
 header.products-header h1 {
@@ -41,11 +40,20 @@ header.products-header h1 {
   margin: 0;
 }
 
-nav {
-  background-color: var(--nav-background-color);
-  display: flex;
-  justify-content: space-between;
-  padding: 1em 2em;
+h2 {
+  font-family: var(--heading-font);
+  font-size: 2em;
+}
+
+h3 {
+  font-family: var(--heading-font);
+  font-size: 1.5em;
+}
+
+p {
+  font-family: var(--paragraph-font);
+  font-size: 1.2em;
+  line-height: 1.5;
 }
 
 nav {
@@ -65,42 +73,67 @@ nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
 }
+
 .activeProducts::before { 
-	content: "📍";  /* just a wayfinding symbol for the user */
+  content: "📍";  /* just a wayfinding symbol for the user */
 }
+
 main.products-main {
-  padding: 2em;
+  padding: 20px;
 }
 
-main.products-main section {
-  margin: 2em 0;
+/* Product cards */
+#products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-main.products-main h2 {
-  font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
-  font-size: 2em;
+.product-card {
+  border: 0.5px solid var(--accent1-color);
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 4px 8px var(--accent2-color);
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  justify-items: left;
 }
 
-main.products-main p {
-  font-family: var(--paragraph-font);
-  color: var(--paragraph-color-on-white);
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  text-align: center;
   font-size: 1.2em;
-  line-height: 1.5;
+  margin: 10px 0;
 }
 
-footer.products-footer {
-  background-color: var(--secondary-color);
-  color: var(--headline-color-on-color);
-  padding: 1em 0;
+.product-card p {
+  text-align: center;
   font-size: 0.9em;
 }
 
-a {
-  color: var(--accent1-color);
-  text-decoration: none;
-}
+/* Large view */
+@media (min-width: 37.5em) {
+  header.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+  }
 
-a:hover {
-  text-decoration: underline;
+  #products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; /* Adjust the grid gap as needed */
+  }
+
+  main div {
+    border: 1px solid var(--Third-color);
+    padding: 10px;
+  }
 }

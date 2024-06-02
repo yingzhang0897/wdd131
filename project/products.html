@@ -6,6 +6,7 @@
   <meta charset="utf-8" />
   <title>Products - Jianjun's Furniture Store</title>
   <link rel="stylesheet" href="styles/products.css">
+  <script src="scripts/furniture-store.js" defer></script>
 </head>
 
 <body class="products">
@@ -18,21 +19,16 @@
         <a href="contact-us.html" class="activeContact">Contact Us</a>
 </nav>
 </header>
-  
   <main class="products-main">
     <h2>Explore Our Furniture</h2>
-    <p>We offer a wide range of furniture including living room sets, bedroom sets, dining tables, and office furniture. Browse our collection to find the perfect pieces for your home or office.</p>
-    <ul>
-      <li>Living Room Sets</li>
-      <li>Bedroom Sets</li>
-      <li>Dining Tables</li>
-      <li>Office Furniture</li>
-    </ul>
+    <div id="products-container"></div>
+    <h3>Explore our range of furniture sets. Perfect for your home or office.</p>
   </main>
   
   <footer class="products-footer">
-    <p>&copy; 2024 Jianjun's Furniture Store. All rights reserved.</p>
-  </footer>
+    <p>&copy;<span id="currentYear"></span> Jianjun's Furniture Store. All rights reserved. </p>
+    <p id="lastModified">Last modified: </p>
+</footer>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - Jianjun's Furniture Store</title>
   <link rel="stylesheet" href="styles/services.css">
+  <script src="scripts/furniture-store.js" defer></script>
 </head>
 
 <body class="services">
@@ -22,17 +23,13 @@
   <main class="services-main">
     <h2>What We Offer</h2>
     <p>At Jianjun's Furniture Store, we provide a variety of services to enhance your shopping experience and ensure your satisfaction.</p>
-    <ul>
-      <li>Home Delivery</li>
-      <li>Furniture Assembly</li>
-      <li>Interior Design Consultation</li>
-      <li>Customer Support</li>
-    </ul>
+    <div id="services-container"></div>
   </main>
   
   <footer class="services-footer">
-    <p>&copy; 2024 Jianjun's Furniture Store. All rights reserved.</p>
-  </footer>
+    <p>&copy;<span id="currentYear"></span> Jianjun's Furniture Store. All rights reserved. </p>
+    <p id="lastModified">Last modified: </p>
+</footer>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Jianjun's Furniture Store</title>
     <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/furniture-store.js" defer></script>
 </head>
 <body class="home">
     <header class="home-header">
@@ -16,7 +17,7 @@
             <a href="contact-us.html" class="activeContact">Contact Us</a>
         </nav>
     </header>
-    <div><img src="images/hero.webp" alt="furniture display"></div>
+    <iframe src="https://drive.google.com/file/d/1rFexfM6fceMdR5nIb_1fTsrm-mfGNQxy/preview" width="640" height="480" allow="autoplay"></iframe>
     <main class="home-main">
         <section>
             <h2>About Us</h2>
@@ -39,6 +40,7 @@
           </section>
     </main>
     <footer class="home-footer">
-        <p>&copy; 2024 Jianjun's Furniture Store. All rights reserved.</p>
+        <p>&copy;<span id="currentYear"></span> Jianjun's Furniture Store. All rights reserved. </p>
+        <p id="lastModified">Last modified: </p>
     </footer>
 </body>
