@@ -2,8 +2,8 @@
     --font-family: 'Roboto', sans-serif;
     --font-weight: 400;
     --font-style: normal;
-    --Primary-color: lightsalmon;
-    --Second-color: #000080; 
+    --Primary-color: #8b4672;
+    --Second-color:gold; 
   }
 body {
     font-family: var(--font-family);
@@ -24,6 +24,7 @@ form {
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--Primary-color);
 }
 fieldset {
     margin: 1rem auto;
@@ -75,7 +76,7 @@ input[type="submit"] {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 input[type="submit"]:hover {
-    background-color: var(--Primary-color);
+    background-color: var(--Second-color);
 }
 span {
     font-style: italic;
@@ -100,17 +101,17 @@ span {
 }
 
 .star-rating input:checked ~ label {
-    color: gold;
+    color: var(--Second-color);
 }
 
 .star-rating label:hover,
 .star-rating label:hover ~ label {
-    color: gold;
+    color: var(--Second-color);
 }
 
 .star-rating input:checked ~ label:hover,
 .star-rating input:checked ~ label:hover ~ label {
-    color: gold;
+    color: var(--Second-color);
 }
 
 /* Footer styles */

@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Review successful</title>
+    <title>Post Review Successful</title>
 </head>
 <body>
     <h1>Post Review Successful!</h1>
     <p>Thanks for posting the review for our products! We look forward to serving you again!</p>
+    <p id="reviewCount"></p>
+    <script>
+        const reviewCounterKey = 'reviewCount';
+        let reviewCount = localStorage.getItem(reviewCounterKey) ? parseInt(localStorage.getItem(reviewCounterKey)) : 0;
+        reviewCount += 1;
+        localStorage.setItem(reviewCounterKey, reviewCount);
+        document.getElementById('reviewCount').textContent = `You have submitted ${reviewCount} review(s).`;
+    </script>
 </body>
 </html>
