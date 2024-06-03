@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Jianjun's Furniture Store</title>
   <link rel="stylesheet" href="styles/contact-us.css">
@@ -22,11 +22,11 @@
   <main class="contact-main">
     <h2>Get in Touch</h2>
     <form action="submission-success.html" method="get">
-      <label for="name">Name: <input type="text" id="name" name="name" required></label>
-      <label for="tel">Cellphone: <input type="tel" id="phone" name="phone" required></label>
+      <label for="name">Name*: <input type="text" id="name" name="name" required></label>
+      <label for="phone">Cellphone*: <input type="tel" id="phone" name="phone" required></label>
       <label for="email">Email: <input type="email" id="email" name="email"></label>
       <fieldset>
-        <label for="services">What type of services do you need?</label><br>
+        <h3>What type of services do you need?<span>(can be multiple)</span></h3>
         <label for="delivery-assembly">
           <input type="checkbox" id="delivery-assembly" name="service" value="delivery-assembly">Make delivery & assembly appointment
         </label>
@@ -41,7 +41,7 @@
         </label>
       </fieldset>
       <label for="message">Message:<span>(optional)</span></label>
-      <textarea id="message" name="message" required></textarea>
+      <textarea id="message" name="message"></textarea>
       <input type="submit" value="Here we go">
     </form>
     <p>If you have any questions, need assistance, or would like to provide feedback, please contact us using the form below or reach out through our provided contact details.</p>

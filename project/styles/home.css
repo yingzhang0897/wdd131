@@ -61,6 +61,15 @@ nav a:hover {
 .activeHome::before { 
 	content: "📍";  /* just a wayfinding symbol for the user */
 }
+
+iframe {
+  margin: 10px auto;
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 16 / 9; 
+    border: none;
+}
 main.home-main {
   padding: 2em;
 }

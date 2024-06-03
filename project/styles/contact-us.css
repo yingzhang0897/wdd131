@@ -15,6 +15,7 @@
   --paragraph-background-color: #04466c;
   --nav-link-color: #ebcfb2;
   --nav-background-color: #04466c;
+  --nav-hover-link-color: #5A4956;
   --nav-hover-background-color: #ebcfb2;
 }
 
@@ -66,42 +67,15 @@ main.contact-main {
   padding: 2em;
 }
 
-main.contact-main section {
-  margin: 2em 0;
-}
-
 main.contact-main h2 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
   font-size: 2em;
 }
 
-main.contact-main p {
-  font-family: var(--paragraph-font);
-  color: var(--paragraph-color-on-white);
-  font-size: 1.2em;
-  line-height: 1.5;
-}
-
-footer.contact-footer {
-  background-color: var(--secondary-color);
-  color: var(--headline-color-on-color);
-  padding: 1em 0;
-  font-size: 0.9em;
-}
-
-a {
-  color: var(--accent1-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 label {
-  padding: 10px;
+  padding: 20px;
   display: block;
-  margin: 10px;
 }
 form input:required {
   border-left: solid 8px var(--accent2-color);
@@ -139,4 +113,27 @@ input[type="submit"] {
 }
 span {
   font-style: italic;
+}
+
+main.contact-main p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+footer.contact-footer {
+  background-color: var(--secondary-color);
+  color: var(--headline-color-on-color);
+  padding: 1em 0;
+  font-size: 0.9em;
+}
+
+a {
+  color: var(--accent1-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
