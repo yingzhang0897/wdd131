@@ -10,7 +10,7 @@
     <p>Thanks for posting the review for our products! We look forward to serving you again!</p>
     <p id="reviewCount"></p>
     <script>
-        const reviewCounterKey = 'reviewCount';
+        const reviewCounterKey = '';
         let reviewCount = localStorage.getItem(reviewCounterKey) ? parseInt(localStorage.getItem(reviewCounterKey)) : 0;
         reviewCount += 1;
         localStorage.setItem(reviewCounterKey, reviewCount);
