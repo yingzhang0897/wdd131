@@ -3,7 +3,7 @@ const button = document.querySelector('button');
 const list = document.querySelector('#list');
 const li = document.createElement('li');
 li.textContent = input.value;
-const deleteButton = document.createElement('deleteButton');
+const deleteButton = document.createElement('button');
 deleteButton.textContent = 'X';
 li.append(deleteButton);
 list.append(li);
