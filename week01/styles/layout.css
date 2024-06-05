@@ -28,9 +28,6 @@ nav {
     margin-top: 0;
     padding: 1rem;
   }
-  nav a {
-    flex: 1 1 100%;
-  }
 
 main {
   display: grid;
