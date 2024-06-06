@@ -105,6 +105,7 @@ nav {
 nav  {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
 nav a {
   padding:1em;
