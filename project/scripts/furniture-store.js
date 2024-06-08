@@ -40,6 +40,15 @@ function createFurnitureCards(images) {
   createFurnitureCards(images);
 });
 
+//create hamButton for small view of products page
+const hamButton = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
+
+hamButton.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamButton.classList.toggle('open');
+});
+
 //create cards for the services page
 document.addEventListener('DOMContentLoaded', () => {
   const services = [

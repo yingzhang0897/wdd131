@@ -63,7 +63,7 @@ p {
   font-size: 1.2em;
   line-height: 1.5;
 }
-
+/*
 nav {
   background-color: var(--nav-background-color);
   display: flex;
@@ -83,7 +83,7 @@ nav a:hover {
   background-color: var(--nav-hover-background-color);
   text-decoration: underline;
 }
-
+*/
 .activeProducts::before { 
   content: "📍";  /* just a wayfinding symbol for the user */
 }
@@ -135,6 +135,49 @@ footer.products-footer {
 footer a {
   color: #ebcfb2;
 }
+/* for the hamButton*/
+#menu {
+	font-size: 1.5rem;
+  border: none;
+  background: none;
+	color: var(--primary-color);
+	position: fixed;
+	top: 5rem;
+	right: 9rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.navigation {	
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	background-color: var(--accent1-color);
+	color: var(--secondary-color);
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+.navigation a:hover {
+	background-color: var(--nav-hover-background-color);
+	color: var(--accent2-color);
+	font-weight: 700;
+}
+.open a {
+	display: block;
+}
+
 
 /* Large view */
 @media (min-width: 37.5em) {
@@ -150,8 +193,7 @@ footer a {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
   }
-  main div {
-    border: 1px solid var(--Third-color);
-    padding: 10px;
+  #menu.open::before {
+    content: none;
   }
-}
+} 
